@@ -1,9 +1,11 @@
 from sensor.configuration.mongo_db_connection import MongoDBClient 
 from sensor.exception import SensorException
 import sys
+from sensor.logger import logging
 
 def test_exception():
     try:
+        logging.info("We are dividing 1 by zero")
         a=1/0
     except Exception as e:
         raise SensorException(e,sys)
