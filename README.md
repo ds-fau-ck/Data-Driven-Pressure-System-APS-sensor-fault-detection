@@ -51,7 +51,7 @@ git clone https://github.com/sethusaim/Sensor-Fault-Detection.git
 ### Step 2- Create a conda environment after opening the repository
 
 ```bash
-conda create -n sensor python=3.10 -y
+conda create -n sensor-venv python=3.10 -y
 ```
 
 ```bash
