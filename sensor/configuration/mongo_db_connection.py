@@ -12,7 +12,7 @@ class MongoDBClient:
             if MongoDBClient.client is None:
                 #mongo_db_url=os.getenv(MONGODB_URL_KEY)
             
-                mongo_db_url="mongodb+srv://chkul:1234@cluster0.egzdulh.mongodb.net/?appName=Cluster0"
+               
                 #mongodb+srv://chkul:<db_password>@cluster0.egzdulh.mongodb.net/?appName=Cluster0
                 #MONGO_DB_URL = "mongodb://localhost:27017"
 
