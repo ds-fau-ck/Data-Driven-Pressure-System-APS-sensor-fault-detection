@@ -7,7 +7,7 @@ import json
 from sensor.configuration.mongo_db_connection import MongoDBClient
 from sensor.constant.database import DATABASE_NAME
 from sensor.exception import SensorException
-#from sensor.data_access.sensor_data import SensorData
+
 from sensor.logger import logging
 from pandas import DataFrame
 class SensorData:
@@ -67,7 +67,9 @@ class SensorData:
                 collection = self.mongo_client.Database[collection_name]
             else:
                 collection = self.mongo_client[database_name][collection_name]
+                print("Collection Name:",collection_name)
             df = pd.DataFrame(list(collection.find()))
+            print("Columns in df:",df.columns.to_list())
 
             if "_id" in df.columns.to_list():
                 df = df.drop(columns=["_id"], axis=1)

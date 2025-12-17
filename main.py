@@ -2,8 +2,9 @@ from sensor.configuration.mongo_db_connection import MongoDBClient
 from sensor.exception import SensorException
 import sys
 from sensor.logger import logging
-from sensor.entity.config_entity import TrainingPipelineConfig, DataIngestionConfig
+#from sensor.entity.config_entity import TrainingPipelineConfig, DataIngestionConfig
 from sensor.pipeline.training_pipeline import TrainPipeline
+import os
 
 def test_exception():
     try:
@@ -13,6 +14,7 @@ def test_exception():
         raise SensorException(e,sys)
 
 if __name__=="__main__":
+    
     train_pipeline=TrainPipeline()
     train_pipeline.run_pipeline()
     #training_pipeline_config=TrainingPipelineConfig()

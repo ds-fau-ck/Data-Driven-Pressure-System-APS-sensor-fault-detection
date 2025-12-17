@@ -12,7 +12,11 @@ class MongoDBClient:
             if MongoDBClient.client is None:
                 #mongo_db_url=os.getenv(MONGODB_URL_KEY)
             
-                mongo_db_url="mongodb+srv://root:1234@cluster0.zmu2alg.mongodb.net/?appName=Cluster0"
+                mongo_db_url="mongodb+srv://chkul:1234@cluster0.egzdulh.mongodb.net/?appName=Cluster0"
+                #mongodb+srv://chkul:<db_password>@cluster0.egzdulh.mongodb.net/?appName=Cluster0
+                #MONGO_DB_URL = "mongodb://localhost:27017"
+
+                #MONGO_DB_URL="mongodb+srv://avnish:XglZZ9OkjjUw74pZ@ineuron-ai-projects.7eh1w4s.mongodb.net/admin?authSource=admin&replicaSet=atlas-okvkrd-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true"
                 MongoDBClient.client = pymongo.MongoClient(mongo_db_url, tlsCAFile=ca)
                 self.client=MongoDBClient.client
                 self.Database= self.client[database_name]
