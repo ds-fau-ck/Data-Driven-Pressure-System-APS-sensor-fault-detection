@@ -11,6 +11,7 @@ class MongoDBClient:
         try:
             if MongoDBClient.client is None:
                 #mongo_db_url=os.getenv(MONGODB_URL_KEY)
+                
 
                 #mongodb+srv://chkul:<db_password>@cluster0.egzdulh.mongodb.net/?appName=Cluster0
                 #MONGO_DB_URL = "mongodb://localhost:27017"
